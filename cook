@@ -9,7 +9,7 @@ kernelDir1="/home/zaichron-lin/AndroidDev/htc_jewel_kernel_sense" #( Example /ho
 kernelDir2="/home/zaichron-lin/AndroidDev/htc_jewel_kernel_sense" #( Example /home/user/path )
 kernelDir3="Path to kernel 3" #( Example /home/user/path )
 #Toolchain path
-toolchainDir="/home/zaichron-lin/AndroidDev/AAtoolchains/linaro_toolchains_2014/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.07" #( Example /home/user/path )
+toolchainDir="/home/zaichron-lin/AndroidDev/AAtoolchains/linaro_toolchains_2014/arm-cortex_a8-linux-gnueabi-linaro_4.9.1-2014.07" #( Example /home/user/path )
 #Path where you would like the kernel to be outputed
 exportDir="/home/zaichron-lin/Desktop/Copy/AndroidDev/Kernz/jewel/out" #( Example /home/user/Desktop )
 #Change default to what ever you like
@@ -64,7 +64,7 @@ select opt in $OPTIONS; do
 done
 
 #Setup proper path to rid missing gcc warning
-PATH=$PATH:/home/zaichron-lin/AndroidDev/AAtoolchains/linaro_toolchains_2014/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.07/bin
+PATH=$PATH:/home/zaichron-lin/AndroidDev/AAtoolchains/linaro_toolchains_2014/arm-cortex_a8-linux-gnueabi-linaro_4.9.1-2014.07/bin
 
 #xxx= Your config name
 echo
@@ -80,7 +80,7 @@ make clean
 echo
 echo
 echo " Set to arm at 375, for about 20 to 40 minutes "
-make ARCH=arm CROSS_COMPILE=$toolchainDir/bin/arm-cortex_a15-linux-gnueabihf- -j$threads
+make ARCH=arm CROSS_COMPILE=$toolchainDir/bin/arm-cortex_a8-linux-gnueabi- -j$threads
 
 echo
 echo
